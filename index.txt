@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Implementación - DCW Dental</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #e2e8f0;
+        }
+        @media (max-width: 767px) {
+            .timeline-container::before {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700">
+
+    <div class="container mx-auto px-4 py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-600 mb-4">Plan de Implementación Avanzada</h1>
+        <p class="text-2xl font-light text-slate-600 mb-2">Cliente: DCW Dental (El Salvador)</p>
+        <p class="text-lg text-slate-500 max-w-3xl mx-auto">
+            Un sprint de 6 horas para optimizar su embudo de ventas, integrar SMS y automatizar el marketing para maximizar la conversión de pacientes internacionales.
+        </p>
+    </div>
+
+    <div class="container mx-auto px-4 py-12 relative timeline-container">
+        
+        <div class="mb-12 flex md:justify-between items-center w-full flex-row-reverse md:flex-row">
+            <div class="hidden md:block w-5/12"></div>
+            <div class="z-10 absolute left-1/2 md:left-1/2 -translate-x-1/2 transform">
+                <div class="bg-blue-600 w-8 h-8 rounded-full border-4 border-white"></div>
+            </div>
+            <div class="w-full md:w-5/12 ml-0 md:ml-0 md:mr-auto pl-10 md:pl-0 md:pr-10">
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="text-3xl mr-3">🔧</div>
+                        <h2 class="text-2xl font-bold text-blue-600">Hora 1: Setup y SMS Inmediato</h2>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                        **Objetivo:** Conectar las herramientas y ejecutar la primera acción de SMS para capturar al lead en caliente.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li>Validar las 9 etapas del embudo en Clientify.</li>
+                        <li>Autenticar Clientify y Quo (SMS) en Zapier.</li>
+                        <li>**Automatización #1:** Al crear oportunidad en `Lead Nuevo`, enviar SMS de bienvenida vía Zapier/Quo y mover a `Contacto 1`.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Clientify</span>
+                        <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">Zapier</span>
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">SMS (Quo)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12 flex md:justify-between items-center w-full flex-row-reverse md:flex-row-reverse">
+            <div class="hidden md:block w-5/12"></div>
+            <div class="z-10 absolute left-1/2 md:left-1/2 -translate-x-1/2 transform">
+                <div class="bg-blue-600 w-8 h-8 rounded-full border-4 border-white"></div>
+            </div>
+            <div class="w-full md:w-5/12 ml-0 md:ml-0 md:mr-auto pl-10 md:pl-0 md:ml-auto">
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="text-3xl mr-3">⭐</div>
+                        <h2 class="text-2xl font-bold text-blue-600">Hora 2: Seguimiento 1 (Prueba Social)</h2>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                        **Objetivo:** Implementar la primera acción de marketing para nutrir a leads que no han agendado, usando testimoniales.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li>Preparar material de "Antes y Después" y testimoniales.</li>
+                        <li>**Automatización #2:** Si el lead permanece 3 días en `Contacto 1`, enviar email de "Prueba Social".</li>
+                        <li>Incluir CTA principal para agendar consulta virtual.</li>
+                        <li>Mover automáticamente el lead a `Contacto 2`.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Clientify</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Email Marketing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12 flex md:justify-between items-center w-full flex-row-reverse md:flex-row">
+            <div class="hidden md:block w-5/12"></div>
+            <div class="z-10 absolute left-1/2 md:left-1/2 -translate-x-1/2 transform">
+                <div class="bg-blue-600 w-8 h-8 rounded-full border-4 border-white"></div>
+            </div>
+            <div class="w-full md:w-5/12 ml-0 md:ml-0 md:mr-auto pl-10 md:pl-0 md:pr-10">
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="text-3xl mr-3">🛡️</div>
+                        <h2 class="text-2xl font-bold text-blue-600">Hora 3: Seguimiento 2 (Autoridad)</h2>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                        **Objetivo:** Vencer los miedos del paciente (seguridad, calidad) mostrando las credenciales de los doctores y la clínica.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li>Preparar perfiles de doctores, certificaciones y fotos de la tecnología.</li>
+                        <li>**Automatización #3:** Si el lead permanece 4 días en `Contacto 2`, enviar email de "Autoridad".</li>
+                        <li>CTA final para agendar la consulta.</li>
+                        <li>Crear tarea de "Contacto manual" para el coordinador si el lead no agenda.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Clientify</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Email Marketing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12 flex md:justify-between items-center w-full flex-row-reverse md:flex-row-reverse">
+            <div class="hidden md:block w-5/12"></div>
+            <div class="z-10 absolute left-1/2 md:left-1/2 -translate-x-1/2 transform">
+                <div class="bg-blue-600 w-8 h-8 rounded-full border-4 border-white"></div>
+            </div>
+            <div class="w-full md:w-5/12 ml-0 md:ml-0 md:mr-auto pl-10 md:pl-0 md:ml-auto">
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="text-3xl mr-3">📅</div>
+                        <h2 class="text-2xl font-bold text-blue-600">Hora 4: `Llamada Agendada`</h2>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                        **Objetivo:** Automatizar todo el proceso de confirmación y recordatorios para reducir el "no-show" (inasistencias).
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li>Validar la agenda de Clientify y su sincronización.</li>
+                        <li>**Automatización #4:** Al agendar, mover automáticamente el lead a la etapa `Llamada Agendada`.</li>
+                        <li>**Automatización #5:** Enviar email de confirmación (con enlace Zoom/Meet).</li>
+                        <li>Enviar recordatorio por email 24h antes y por SMS (vía Zapier) 1h antes.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Clientify</span>
+                        <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">Zapier</span>
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">SMS (Quo)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12 flex md:justify-between items-center w-full flex-row-reverse md:flex-row">
+            <div class="hidden md:block w-5/12"></div>
+            <div class="z-10 absolute left-1/2 md:left-1/2 -translate-x-1/2 transform">
+                <div class="bg-blue-600 w-8 h-8 rounded-full border-4 border-white"></div>
+            </div>
+            <div class="w-full md:w-5/12 ml-0 md:ml-0 md:mr-auto pl-10 md:pl-0 md:pr-10">
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="text-3xl mr-3">📝</div>
+                        <h2 class="text-2xl font-bold text-blue-600">Hora 5: Seguimiento de Tratamiento</h2>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                        **Objetivo:** Implementar un seguimiento profesional para los planes de tratamiento (presupuestos) de alto valor.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li>**Automatización #6:** Al mover a `Tratamiento dental enviado`, esperar 3 días y enviar email/SMS de seguimiento.</li>
+                        <li>Mover a `Seguimiento al tratamiento`.</li>
+                        <li>Tras 4 días más, enviar email de valor (no venta): "Guía para tu Viaje Dental a El Salvador".</li>
+                        <li>Crear tarea de "Llamada de Cierre" para el coordinador.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Clientify</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Email Marketing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12 flex md:justify-between items-center w-full flex-row-reverse md:flex-row-reverse">
+            <div class="hidden md:block w-5/12"></div>
+            <div class="z-10 absolute left-1/2 md:left-1/2 -translate-x-1/2 transform">
+                <div class="bg-blue-600 w-8 h-8 rounded-full border-4 border-white"></div>
+            </div>
+            <div class="w-full md:w-5/12 ml-0 md:ml-0 md:mr-auto pl-10 md:pl-0 md:ml-auto">
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <div class="flex items-center mb-3">
+                        <div class="text-3xl mr-3">🚀</div>
+                        <h2 class="text-2xl font-bold text-blue-600">Hora 6: Remarketing y Pruebas</h2>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                        **Objetivo:** Reactivar leads perdidos (`Stand by`) y asegurar que todo el sistema de automatización funcione perfectamente.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li>**Automatización #7:** Al mover a `Stand by`, esperar 45 días y enviar email de reactivación (promo, etc.).</li>
+                        <li>Crear listas segmentadas en Clientify para remarketing en Facebook/Instagram Ads.</li>
+                        <li>**Prueba End-to-End:** Crear un lead de prueba y verificar TODO el flujo (SMS, emails, movimientos de etapa, recordatorios).</li>
+                        <li>Capacitación final y resolución de dudas con el equipo.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Clientify</span>
+                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">Remarketing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="text-center py-8 text-slate-500">
+        <p>&copy; 2025 · Propuesta de Implementación preparada para DCW Dental.</p>
+    </footer>
+
+</body>
+</html>
